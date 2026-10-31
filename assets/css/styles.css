@@ -725,6 +725,7 @@ body.menu-open { overflow: hidden; }
 .split--wide-left { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
 @media (max-width: 860px) { .split, .split--wide-left { grid-template-columns: minmax(0, 1fr); } }
 
+.involves-img { aspect-ratio: 4 / 5; max-width: 420px; margin-top: var(--s-7); }
 .events-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-6); }
 .events-compare h3 { margin-bottom: var(--s-4); padding-bottom: var(--s-3); border-bottom: 2px solid var(--ink); }
 .events-compare ul { list-style: none; }

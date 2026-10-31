@@ -43,5 +43,5 @@ These are assumptions or old content from the current site that should be checke
 4. **Circus Studio and Self-Defense descriptions** were written from research into comparable kids' programs. Confirm they match what NIX actually teaches.
 5. **Hours block** on the contact page is inferred from class times.
 6. **Form delivery:** the form currently shows a success message without sending anything. Connect it to a form service or email handler (see the comment in `assets/js/main.js`).
-7. **Photography gaps:** all photos are from one girls' meet. Photos of boys' gymnastics, preschoolers, Ninja, parties and Circus would strengthen those sections. Circus and Self-Defense use the NIX mark as a placeholder thumbnail on mobile.
+7. **Photography:** most photos are from one girls' meet. Six meet photos of a NIX boys' team athlete (Champion Image, `media/meet_aleksandr/`) now appear on the home team teaser and the Team page. Confirm NIX has usage rights for the Champion Image photos on the website. Photos of preschoolers, Ninja, parties and Circus would still strengthen those sections; Circus and Self-Defense use the NIX mark as a placeholder thumbnail on mobile.
 8. **Open Gym waiver:** the current site links a waiver download. Add the file and link it from `parties.html#open-gym`.
