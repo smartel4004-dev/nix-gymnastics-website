@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NIX Gymnastics</title>
-  <meta name="description" content="Gymnastics, tumbling, ninja and circus classes for boys and girls in New Ipswich, NH, from toddlers to the competitive team. Book a free trial class.">
+  <meta name="description" content="Gymnastics, tumbling and circus classes for boys and girls in New Ipswich, NH, from toddlers to the competitive team. Book a free trial class.">
   <meta name="theme-color" content="#0f1512">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,18 @@
     <nav class="nav" aria-label="Main">
       <ul class="nav-list">
           <li><a href="programs.html">Programs</a></li>
-          <li><a href="team.html">Competitive Team</a></li>
+          <li class="has-sub" data-subnav>
+            <a href="team.html">Competitive Team</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-team"><svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="m1 1.5 5 5 5-5" stroke="currentColor" stroke-width="2"/></svg><span class="visually-hidden">Competitive Team pages</span></button>
+            <div class="sub" id="sub-team">
+              <ul>
+              <li><a href="team.html">Team overview<small>Training, events and how athletes join</small></a></li>
+              <li><a href="meets.html">Meet calendar<small>Upcoming meets, directions, add to calendar</small></a></li>
+              <li><a href="meets.html#results">Results &amp; news<small>Scores and team milestones</small></a></li>
+              <li><a href="galleries.html">Photo galleries<small>Meet photos by season and team</small></a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="parties.html">Parties & Open Gym</a></li>
           <li><a href="about.html">About</a></li>
       </ul>
@@ -42,7 +53,7 @@
   </div>
   <ul class="menu-list">
     <li><a href="programs.html">Programs <small>Classes by age</small></a></li>
-          <li><a href="team.html">Competitive Team <small>Boys & girls</small></a></li>
+          <li><a href="team.html">Competitive Team <small>Boys & girls</small></a><ul class="menu-sub"><li><a href="meets.html">Meet calendar</a></li><li><a href="meets.html#results">Results &amp; news</a></li><li><a href="galleries.html">Photo galleries</a></li></ul></li>
           <li><a href="parties.html">Parties & Open Gym <small>Weekends & drop-in</small></a></li>
           <li><a href="about.html">About <small>Coaches & gym</small></a></li>
           <li><a href="contact.html">Contact <small>Visit or call</small></a></li>
@@ -65,22 +76,18 @@
     <div class="hero-grid">
       <div class="hero-copy">
         <h1 id="hero-title" class="display">Learn to <span class="leap">fly.</span><br>Land with confidence.</h1>
-        <p class="lead">Gymnastics, tumbling, ninja and circus classes for boys and girls, from toddlers to teens. Coached by a 50-year veteran of international gymnastics, right here in New Ipswich, NH.</p>
+        <p class="lead">Gymnastics, tumbling and circus classes for boys and girls, from toddlers to teens. Coached by a 50-year veteran of international gymnastics, right here in New Ipswich, NH.</p>
         <div class="actions">
           <a class="btn btn--tint btn--lg" href="contact.html">Book a free trial class <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
           <a class="link-arrow" href="#find-a-class">Find the right class <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
         </div>
-        <ul class="hero-facts">
-          <li><strong>Toddlers to teens</strong></li>
-          <li><strong>Boys &amp; girls</strong></li>
-          <li><strong>Recreational to competitive</strong></li>
-        </ul>
       </div>
       <div class="hero-media">
-        <!-- Hero image. To revert to the wider original, swap this line for the commented one below.
-        <div class="img"><img src="assets/img/beam-arms-wide.jpg" srcset="assets/img/beam-arms-wide-sm.jpg 695w, assets/img/beam-arms-wide.jpg 1391w" sizes="(max-width: 860px) 100vw, 46vw" width="1391" height="1800" alt="A NIX gymnast balances on the beam with arms spread wide while her coach watches" fetchpriority="high"></div>
-        -->
+        <!-- Hero image: NIX boys' team athlete in a split leap on floor.
+             To revert to the girls' beam photo, swap the active line for the commented one.
         <div class="img img--tight"><img src="assets/img/beam-arms-wide-tight.jpg" srcset="assets/img/beam-arms-wide-tight-sm.jpg 720w, assets/img/beam-arms-wide-tight.jpg 1440w" sizes="(max-width: 860px) 100vw, 46vw" width="1440" height="1798" alt="A NIX gymnast balances on the beam with arms spread wide" fetchpriority="high"></div>
+        -->
+        <div class="img img--leap"><img src="assets/img/boys-leap-hero.jpg" srcset="assets/img/boys-leap-hero-sm.jpg 719w, assets/img/boys-leap-hero.jpg 1439w" sizes="(max-width: 860px) 100vw, 46vw" width="1439" height="2160" alt="A NIX team gymnast soars through a split leap during his floor routine" fetchpriority="high"></div>
         <span class="hero-stroke" aria-hidden="true"></span>
       </div>
     </div>
@@ -144,16 +151,6 @@
             <p class="desc">Rolls, handsprings and flips with safe technique. Great for cheer, dance and snowboarding.</p>
             <p class="meta meta--ages"><b>Ages</b>7 and up</p>
             <p class="meta meta--when"><b>When</b>Tuesday evenings</p>
-            <span class="go" aria-hidden="true"><svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
-          </a>
-        </li>
-        <li class="program-row" data-ages="4-5 6-8 9-12 13" data-preview="assets/img/kids-run-sm.jpg">
-          <a href="programs.html#ninja">
-            <span class="thumb" aria-hidden="true"><img src="assets/img/kids-run-sm.jpg" alt="" loading="lazy" width="720" height="900"></span>
-            <h3 class="h3">Ninja</h3>
-            <p class="desc">Obstacle courses, climbing, rolls, jumps and kicks, with levels to earn as skills grow.</p>
-            <p class="meta meta--ages"><b>Ages</b>4 and up</p>
-            <p class="meta meta--when"><b>When</b>Ask for current times</p>
             <span class="go" aria-hidden="true"><svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
           </a>
         </li>
@@ -244,10 +241,10 @@
   </section>
 
   <!-- Competitive team -->
-  <section class="section on-dark cut-top pull-up team-feature" aria-labelledby="team-title">
+  <section class="section on-dark cut-top team-feature" aria-labelledby="team-title">
     <div class="container team-feature-grid">
       <div class="team-feature-media reveal">
-        <div class="img"><img src="assets/img/boys-floor-flip.jpg" srcset="assets/img/boys-floor-flip-sm.jpg 600w, assets/img/boys-floor-flip.jpg 1199w" sizes="(max-width: 900px) 80vw, 42vw" width="1199" height="1800" alt="A NIX team gymnast in a green and black singlet flips in a tight tuck during his floor routine" loading="lazy" style="object-position:50% 30%"></div>
+        <div class="img img--slant"><img src="assets/img/boys-pbars-front.jpg" srcset="assets/img/boys-pbars-front-sm.jpg 599w, assets/img/boys-pbars-front.jpg 1198w" sizes="(max-width: 900px) 80vw, 42vw" width="1198" height="1800" alt="A NIX team gymnast in a green and black singlet presses into a handstand on the parallel bars" loading="lazy" style="object-position:50% 30%"></div>
         <div class="img img--offset"><img src="assets/img/beam-arms-up-sm.jpg" width="720" height="900" alt="A gymnast finishes a beam skill with arms raised" loading="lazy"></div>
       </div>
       <div>
@@ -316,7 +313,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/img/nix-logo-rev.svg" alt="NIX Gymnastics" width="190" height="64" loading="lazy">
-        <p>Gymnastics, tumbling, ninja and circus classes for boys and girls, from first steps to competitive team. New Ipswich, New Hampshire.</p>
+        <p>Gymnastics, tumbling and circus classes for boys and girls, from first steps to competitive team. New Ipswich, New Hampshire.</p>
         <ul class="social" aria-label="NIX Gymnastics on social media">
           <li><a href="https://www.facebook.com/NIX-GYM-LLC-100731539967950/" rel="noopener" target="_blank" aria-label="Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9Z"/></svg></a></li>
           <li><a href="https://www.youtube.com/channel/UCjNNc5FpwyWCU7XXIew-84g" rel="noopener" target="_blank" aria-label="YouTube (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
@@ -340,8 +337,11 @@
         <ul>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="team.html">Competitive Team</a></li>
+          <li><a href="meets.html">Meets &amp; results</a></li>
+          <li><a href="galleries.html">Photo galleries</a></li>
           <li><a href="parties.html">Parties &amp; Open Gym</a></li>
           <li><a href="about.html">About NIX</a></li>
+          <li><a href="assets/docs/nix-registration-form.pdf" download="NIX-Gymnastics-registration-form.pdf">Registration form (PDF)</a></li>
         </ul>
       </div>
     </div>

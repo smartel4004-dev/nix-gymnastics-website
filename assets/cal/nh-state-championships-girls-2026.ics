@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NIX Gymnastics//Team meets//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:NIX Gymnastics team meets
+BEGIN:VEVENT
+UID:nh-state-championships-girls-2026@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20260323
+SUMMARY:NH State Championships (girls) – NIX girls' team
+DESCRIPTION:NIX Gymnastics girls' team meet. Hosted by USA Gymnastics NH. Your coach confirms session and report times.
+LOCATION:Saint Anselm College\, Sullivan Ice Arena\, 100 Saint Anselm Dr\, Manchester\, NH\, 03102
+END:VEVENT
+END:VCALENDAR

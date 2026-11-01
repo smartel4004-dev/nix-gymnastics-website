@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NIX Gymnastics//Team meets//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:NIX Gymnastics team meets
+BEGIN:VEVENT
+UID:2026-jingle-bell-bush@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261207
+SUMMARY:2026 Jingle Bell Bush – NIX girls' team
+DESCRIPTION:NIX Gymnastics girls' team meet. Hosted by Noha's Gymnastics Academy. Your coach confirms session and report times.
+LOCATION:Noha's Gymnastics Academy\, 200 Perimeter Rd\, Manchester\, NH\, 03103
+URL:https://www.ngacademy.us
+END:VEVENT
+END:VCALENDAR

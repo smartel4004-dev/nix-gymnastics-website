@@ -20,7 +20,18 @@
     <nav class="nav" aria-label="Main">
       <ul class="nav-list">
           <li><a href="programs.html">Programs</a></li>
-          <li><a href="team.html" aria-current="page">Competitive Team</a></li>
+          <li class="has-sub is-section" data-subnav>
+            <a href="team.html" aria-current="page">Competitive Team</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-team"><svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="m1 1.5 5 5 5-5" stroke="currentColor" stroke-width="2"/></svg><span class="visually-hidden">Competitive Team pages</span></button>
+            <div class="sub" id="sub-team">
+              <ul>
+              <li><a href="team.html" aria-current="page">Team overview<small>Training, events and how athletes join</small></a></li>
+              <li><a href="meets.html">Meet calendar<small>Upcoming meets, directions, add to calendar</small></a></li>
+              <li><a href="meets.html#results">Results &amp; news<small>Scores and team milestones</small></a></li>
+              <li><a href="galleries.html">Photo galleries<small>Meet photos by season and team</small></a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="parties.html">Parties & Open Gym</a></li>
           <li><a href="about.html">About</a></li>
       </ul>
@@ -42,7 +53,7 @@
   </div>
   <ul class="menu-list">
     <li><a href="programs.html">Programs <small>Classes by age</small></a></li>
-          <li><a href="team.html" aria-current="page">Competitive Team <small>Boys & girls</small></a></li>
+          <li class="is-section"><a href="team.html" aria-current="page">Competitive Team <small>Boys & girls</small></a><ul class="menu-sub"><li><a href="meets.html">Meet calendar</a></li><li><a href="meets.html#results">Results &amp; news</a></li><li><a href="galleries.html">Photo galleries</a></li></ul></li>
           <li><a href="parties.html">Parties & Open Gym <small>Weekends & drop-in</small></a></li>
           <li><a href="about.html">About <small>Coaches & gym</small></a></li>
           <li><a href="contact.html">Contact <small>Visit or call</small></a></li>
@@ -125,7 +136,62 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="results-title">
+  <section class="section" aria-labelledby="next-meets-title" data-meets-teaser>
+    <div class="container split split--wide-left" style="align-items:start">
+      <div>
+        <h2 id="next-meets-title" class="h2 reveal" style="margin-bottom:var(--s-4)">Upcoming meets</h2>
+        <p class="muted reveal" data-delay="1" style="max-width:34ch;margin-bottom:var(--s-5)">Dates, directions and calendar downloads for every meet this season.</p>
+        <a class="link-arrow reveal" data-delay="1" href="meets.html">Full meet calendar &amp; results <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
+      </div>
+      <div class="reveal" data-delay="1">
+        <ol class="meet-list meet-list--teaser" data-meets-teaser-list>
+          <li class="meet meet--girls" data-squad="girls" data-start="2026-12-04" data-end="2026-12-06">
+            <p class="meet-date"><time datetime="2026-12-04"><span class="mo">Dec</span> <span class="dd">4–6</span></time> <span class="dw">Fri–Sun</span></p>
+            <div class="meet-body">
+              <h3 class="meet-name"><a href="meets.html#2026-jingle-bell-bush">2026 Jingle Bell Bush</a></h3>
+              <p class="meet-squad">Girls' team</p>
+              <p class="meet-where">Noha&#x27;s Gymnastics Academy, Manchester, NH</p>
+            </div>
+          </li>
+          <li class="meet meet--boys" data-squad="boys" data-start="2026-12-12" data-end="2026-12-13">
+            <p class="meet-date"><time datetime="2026-12-12"><span class="mo">Dec</span> <span class="dd">12–13</span></time> <span class="dw">Sat–Sun</span></p>
+            <div class="meet-body">
+              <h3 class="meet-name"><a href="meets.html#steve-randall-invitational-2026">Steve Randall Invitational</a></h3>
+              <p class="meet-squad">Boys' team</p>
+              <p class="meet-where">Mill Works, Westford, MA</p>
+            </div>
+          </li>
+          <li class="meet meet--boys" data-squad="boys" data-start="2027-01-15" data-end="2027-01-17">
+            <p class="meet-date"><time datetime="2027-01-15"><span class="mo">Jan</span> <span class="dd">15–17</span></time> <span class="dw">Fri–Sun</span></p>
+            <div class="meet-body">
+              <h3 class="meet-name"><a href="meets.html#jr-rocky-mountain-open-2027">Jr. Rocky Mountain Open</a></h3>
+              <p class="meet-squad">Boys' team</p>
+              <p class="meet-where">US Air Force Academy, Cadet Gymnasium, Colorado Springs, CO</p>
+            </div>
+          </li>
+          <li class="meet meet--boys" data-squad="boys" data-start="2027-02-13" data-end="2027-02-13">
+            <p class="meet-date"><time datetime="2027-02-13"><span class="mo">Feb</span> <span class="dd">13</span></time> <span class="dw">Sat</span></p>
+            <div class="meet-body">
+              <h3 class="meet-name"><a href="meets.html#frederick-flips-2027">Frederick Flips</a></h3>
+              <p class="meet-squad">Boys' team</p>
+              <p class="meet-where">Springfield College, Springfield, MA</p>
+            </div>
+          </li>
+          <li class="meet meet--boys" data-squad="boys" data-start="2027-02-27" data-end="2027-02-28">
+            <p class="meet-date"><time datetime="2027-02-27"><span class="mo">Feb</span> <span class="dd">27–28</span></time> <span class="dw">Sat–Sun</span></p>
+            <div class="meet-body">
+              <h3 class="meet-name"><a href="meets.html#2027-boston-classic">2027 Boston Classic</a></h3>
+              <p class="meet-squad">Boys' team</p>
+              <p class="meet-where">Massachusetts Elite Gymnastics Academy, Millis, MA</p>
+            </div>
+          </li>
+        </ol>
+        <p class="muted" data-meets-teaser-empty hidden>The next season's meets will be posted soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="results-title" style="padding-top:0">
     <div class="container">
       <div class="split" style="margin-bottom:var(--s-8)">
         <div>
@@ -135,14 +201,16 @@
         <div class="reveal" data-delay="1">
           <p class="highlight-quote">In 2021, NIX gymnast Aleksandr earned a place on the <em>Future Stars National Team</em> for 11-year-olds.</p>
           <p class="muted measure">Coach Nikolai's athletes have competed at USA Junior Olympic National Championships and USA National Championships. NIX teams have competed at meets such as the Harvest Meet, Gobble Wobble, Judge's Cup, Winter Carnival, Boston Classic, Hip Hop Classic and the New England Championships.</p>
+          <a class="link-arrow" href="meets.html#results">Team results &amp; news <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
         </div>
       </div>
       <div class="mosaic">
         <div class="img reveal"><img src="assets/img/coach-spot-bar.jpg" srcset="assets/img/coach-spot-bar-sm.jpg 720w, assets/img/coach-spot-bar.jpg 1440w" sizes="(max-width: 760px) 100vw, 38vw" width="1440" height="1800" alt="Coach Nikolai spots a gymnast as she stands on the low bar" loading="lazy"></div>
-        <div class="img reveal" data-delay="1"><img src="assets/img/boys-pbars-handstand-sm.jpg" width="599" height="900" alt="A NIX gymnast holds a handstand on the parallel bars" loading="lazy" style="object-position:50% 35%"></div>
+        <div class="img reveal" data-delay="1"><img src="assets/img/boys-pbars-back-sm.jpg" width="599" height="900" alt="A NIX gymnast, bib 451, holds a handstand on the parallel bars" loading="lazy" style="object-position:50% 40%"></div>
         <div class="img reveal" data-delay="2"><img src="assets/img/beam-coach-sm.jpg" width="695" height="900" alt="Coach Nikolai guides a gymnast on the beam" loading="lazy"></div>
         <div class="img reveal" data-delay="1"><img src="assets/img/boys-pommel-flair.jpg" srcset="assets/img/boys-pommel-flair-sm.jpg 900w, assets/img/boys-pommel-flair.jpg 1800w" sizes="(max-width: 760px) 100vw, 60vw" width="1800" height="1198" alt="A NIX gymnast extends fully horizontal over the pommel horse" loading="lazy" style="object-position:50% 45%"></div>
       </div>
+      <a class="link-arrow" href="galleries.html" style="margin-top:var(--s-6)">Team photo galleries <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
     </div>
   </section>
 
@@ -153,7 +221,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/img/nix-logo-rev.svg" alt="NIX Gymnastics" width="190" height="64" loading="lazy">
-        <p>Gymnastics, tumbling, ninja and circus classes for boys and girls, from first steps to competitive team. New Ipswich, New Hampshire.</p>
+        <p>Gymnastics, tumbling and circus classes for boys and girls, from first steps to competitive team. New Ipswich, New Hampshire.</p>
         <ul class="social" aria-label="NIX Gymnastics on social media">
           <li><a href="https://www.facebook.com/NIX-GYM-LLC-100731539967950/" rel="noopener" target="_blank" aria-label="Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9Z"/></svg></a></li>
           <li><a href="https://www.youtube.com/channel/UCjNNc5FpwyWCU7XXIew-84g" rel="noopener" target="_blank" aria-label="YouTube (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
@@ -177,8 +245,11 @@
         <ul>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="team.html">Competitive Team</a></li>
+          <li><a href="meets.html">Meets &amp; results</a></li>
+          <li><a href="galleries.html">Photo galleries</a></li>
           <li><a href="parties.html">Parties &amp; Open Gym</a></li>
           <li><a href="about.html">About NIX</a></li>
+          <li><a href="assets/docs/nix-registration-form.pdf" download="NIX-Gymnastics-registration-form.pdf">Registration form (PDF)</a></li>
         </ul>
       </div>
     </div>

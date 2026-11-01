@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NIX Gymnastics//Team meets//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:NIX Gymnastics team meets
+BEGIN:VEVENT
+UID:frederick-flips-2027@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+SUMMARY:Frederick Flips – NIX boys' team
+DESCRIPTION:NIX Gymnastics boys' team meet. Hosted by USA Gymnastics. Your coach confirms session and report times.
+LOCATION:Springfield College\, 263 Alden St\, Springfield\, MA\, 01109
+URL:https://usagym.org
+END:VEVENT
+END:VCALENDAR

@@ -107,6 +107,39 @@
     }
   }
 
+  /* ---------- Main nav dropdowns ----------
+     Hover opens them for mouse users (CSS). The chevron button is the keyboard/touch control. */
+  var subnavs = document.querySelectorAll("[data-subnav]");
+  function closeSub(item, refocus) {
+    if (!item.classList.contains("is-open")) return;
+    item.classList.remove("is-open");
+    var t = item.querySelector(".sub-toggle");
+    t.setAttribute("aria-expanded", "false");
+    if (refocus) t.focus();
+  }
+  subnavs.forEach(function (item) {
+    var toggle = item.querySelector(".sub-toggle");
+    toggle.addEventListener("click", function () {
+      var open = !item.classList.contains("is-open");
+      subnavs.forEach(function (other) { if (other !== item) closeSub(other); });
+      item.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      if (open) item.querySelector(".sub a").focus();
+    });
+    item.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeSub(item, true);
+    });
+    item.querySelectorAll(".sub a").forEach(function (a) {
+      a.addEventListener("click", function () { closeSub(item); a.blur(); });
+    });
+    item.addEventListener("focusout", function (e) {
+      if (!item.contains(e.relatedTarget)) closeSub(item);
+    });
+  });
+  document.addEventListener("click", function (e) {
+    subnavs.forEach(function (item) { if (!item.contains(e.target)) closeSub(item); });
+  });
+
   /* ---------- Scroll reveals ---------- */
   var reveals = document.querySelectorAll(".reveal");
   if (!reduceMotion && "IntersectionObserver" in window) {
@@ -224,7 +257,7 @@
       if (submitLabel) submitLabel.textContent = copy[t][1];
     }
 
-    // Prefill from links like contact.html?type=team or ?program=ninja
+    // Prefill from links like contact.html?type=team or ?program=tumbling
     var pType = params.get("type");
     if (pType && copy[pType]) {
       var radio = form.querySelector("input[name='type'][value='" + pType + "']");
@@ -298,5 +331,131 @@
         success.focus();
       }, 700);
     });
+  }
+
+  /* ---------- Team meets ----------
+     The build splits meets into upcoming and past using the build date.
+     Re-check against today so a stale build never lists a finished meet as upcoming. */
+  var DAY = 864e5;
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+  function day(iso) { var p = iso.split("-"); return new Date(+p[0], p[1] - 1, +p[2]); }
+  function isPast(li) { return day(li.dataset.end) < today; }
+  function countdown(li) {
+    var d = Math.round((day(li.dataset.start) - today) / DAY);
+    if (d < 0) return "Happening now";
+    if (d === 0) return "Today";
+    if (d === 1) return "Tomorrow";
+    return "In " + d + " days";
+  }
+
+  var meets = document.querySelector("[data-meets]");
+  if (meets) {
+    var upcoming = meets.querySelector("[data-meets-upcoming]");
+    var pastList = meets.querySelector("[data-meets-past]");
+    var status = meets.querySelector("[data-meets-status]");
+    var filters = meets.querySelectorAll("[data-squad-filter]");
+
+    var moved = 0;
+    upcoming.querySelectorAll(".meet").forEach(function (li) {
+      if (isPast(li)) { pastList.insertBefore(li, pastList.firstChild); moved++; }
+    });
+    var pastCount = pastList.children.length;
+    if (moved) meets.querySelector("[data-past-label]").textContent = pastCount + " meets";
+    var pastWrap = meets.querySelector("[data-meets-past-wrap]");
+    if (!pastCount) pastWrap.hidden = true;
+
+    function applyFilter(squad) {
+      var shown = 0, next = null;
+      upcoming.querySelectorAll(".meet-month").forEach(function (group) {
+        var visible = 0;
+        group.querySelectorAll(".meet").forEach(function (li) {
+          var match = squad === "all" || li.dataset.squad === squad;
+          li.hidden = !match;
+          li.classList.remove("is-next");
+          var tag = li.querySelector(".meet-next");
+          if (tag) tag.remove();
+          if (match) { visible++; if (!next) next = li; }
+        });
+        group.hidden = visible === 0;
+        shown += visible;
+      });
+      if (next) {
+        next.classList.add("is-next");
+        var label = document.createElement("p");
+        label.className = "meet-next";
+        label.textContent = "Next meet · " + countdown(next);
+        next.insertBefore(label, next.firstChild);
+      }
+      var total = upcoming.querySelectorAll(".meet").length;
+      meets.querySelector("[data-meets-empty]").hidden = total > 0;
+      if (squad === "all") {
+        status.textContent = total ? total + (total === 1 ? " upcoming meet" : " upcoming meets") : "";
+      } else {
+        var who = squad === "boys" ? "boys' team" : "girls' team";
+        status.textContent = shown
+          ? shown + (shown === 1 ? " upcoming meet" : " upcoming meets") + " for the " + who
+          : "No upcoming meets for the " + who + " yet.";
+      }
+    }
+
+    filters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        filters.forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+        applyFilter(btn.dataset.squadFilter);
+      });
+    });
+    applyFilter("all");
+  }
+
+  /* ---------- Photo gallery index: filter by season and team, kept in the URL ---------- */
+  var gIndex = document.querySelector("[data-galleries]");
+  if (gIndex) {
+    var gCards = gIndex.querySelectorAll(".gcard");
+    var gStatus = gIndex.querySelector("[data-gallery-status]");
+    var params = new URLSearchParams(location.search);
+    var gState = { season: params.get("season") || "all", squad: params.get("squad") || "all" };
+
+    function applyGalleries(updateUrl) {
+      var shown = 0;
+      gCards.forEach(function (card) {
+        var ok = (gState.season === "all" || card.dataset.season === gState.season) &&
+                 (gState.squad === "all" || card.dataset.squad === gState.squad || card.dataset.squad === "all");
+        card.hidden = !ok;
+        if (ok) shown++;
+      });
+      gIndex.querySelectorAll("[data-gfilter]").forEach(function (b) {
+        b.setAttribute("aria-pressed", String(gState[b.dataset.gfilter] === b.dataset.value));
+      });
+      gIndex.querySelector("[data-gallery-empty]").hidden = shown > 0;
+      gStatus.textContent = shown + (shown === 1 ? " gallery" : " galleries");
+      if (updateUrl) {
+        var q = new URLSearchParams();
+        if (gState.season !== "all") q.set("season", gState.season);
+        if (gState.squad !== "all") q.set("squad", gState.squad);
+        history.replaceState(null, "", location.pathname + (q.toString() ? "?" + q : ""));
+      }
+    }
+    gIndex.querySelectorAll("[data-gfilter]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        gState[b.dataset.gfilter] = b.dataset.value;
+        applyGalleries(true);
+      });
+    });
+    applyGalleries(false);
+  }
+
+  // Team page preview: the next three meets that haven't finished.
+  var teaser = document.querySelector("[data-meets-teaser-list]");
+  if (teaser) {
+    var kept = 0;
+    Array.prototype.slice.call(teaser.children).forEach(function (li) {
+      if (isPast(li) || kept >= 3) li.remove();
+      else kept++;
+    });
+    if (!kept) {
+      teaser.hidden = true;
+      document.querySelector("[data-meets-teaser-empty]").hidden = false;
+    }
   }
 })();

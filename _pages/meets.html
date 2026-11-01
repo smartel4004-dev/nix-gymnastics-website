@@ -1,0 +1,72 @@
+title: Meets & Results
+description: NIX Gymnastics competitive team meet calendar with dates, locations and calendar downloads, plus team results and news.
+nav: team
+bar: yes
+---
+<main id="main">
+
+  <header class="page-hero">
+    <div class="container page-hero-grid">
+      <h1 class="h1">Meets &amp; <span class="leap leap--green">results</span></h1>
+      <div>
+        <p class="lead">Where the NIX Competitive Team competes this season, how to get there, and how our athletes did.</p>
+        <div class="actions" style="margin-top:var(--s-5)">
+          <a class="link-arrow" href="assets/cal/nix-team-meets.ics" download>Add the whole season to your calendar {{arrow}}</a>
+          <a class="link-arrow" href="#results">Results &amp; news {{arrow}}</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section meets" aria-labelledby="season-title" data-meets style="padding-top:0">
+    <div class="container">
+      <div class="meets-head">
+        <h2 id="season-title" class="h2">{{season_label}} <span class="leap leap--green">season</span></h2>
+        <p class="muted measure">Host gyms set the schedule, and dates can change. Your coach confirms each athlete's session and report time the week of the meet.</p>
+      </div>
+
+      <ol class="season-strip" aria-label="Meets by month, {{season_label}} season">
+          {{season_strip}}
+      </ol>
+
+      <div class="meets-filter" role="group" aria-label="Show meets for">
+        <button class="seg" type="button" data-squad-filter="all" aria-pressed="true">All meets</button>
+        <button class="seg" type="button" data-squad-filter="boys" aria-pressed="false">Boys' team</button>
+        <button class="seg" type="button" data-squad-filter="girls" aria-pressed="false">Girls' team</button>
+      </div>
+      <p class="finder-status" role="status" aria-live="polite" data-meets-status></p>
+
+      <div class="meets-upcoming" data-meets-upcoming>
+      {{meets_upcoming}}
+      </div>
+      <div class="meets-empty" data-meets-empty hidden>
+        <h3 class="h3">The next season's meets are on their way</h3>
+        <p class="muted">Host gyms usually publish dates in late summer. Check back soon, or ask a coach.</p>
+      </div>
+
+      <details class="past-meets" data-meets-past-wrap>
+        <summary><span class="h4">Past meets</span> <span class="muted" data-past-label>{{meets_past_season}} season · {{meets_past_count}} meets</span></summary>
+        <ol class="meet-list meet-list--past" data-meets-past>
+          {{meets_past}}
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <section class="section on-dark cut-top" id="results" aria-labelledby="results-title">
+    <div class="container">
+      <div class="split" style="align-items:end;margin-bottom:var(--s-8)">
+        <h2 id="results-title" class="h1 reveal">Results &amp; <span class="leap">news</span></h2>
+        <p class="lead reveal" data-delay="1">Big days, personal bests and team milestones from the NIX Competitive Team.</p>
+      </div>
+      <div class="post-feed">
+        {{news_feed}}
+      </div>
+      <div class="actions" style="margin-top:var(--s-8)">
+        <a class="btn btn--tint btn--lg" href="contact.html?type=team">Request a team evaluation {{arrow}}</a>
+        <a class="link-arrow" href="team.html">How the team works {{arrow}}</a>
+      </div>
+    </div>
+  </section>
+
+</main>

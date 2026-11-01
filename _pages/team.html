@@ -73,7 +73,23 @@ bar: yes
     </div>
   </section>
 
-  <section class="section" aria-labelledby="results-title">
+  <section class="section" aria-labelledby="next-meets-title" data-meets-teaser>
+    <div class="container split split--wide-left" style="align-items:start">
+      <div>
+        <h2 id="next-meets-title" class="h2 reveal" style="margin-bottom:var(--s-4)">Upcoming meets</h2>
+        <p class="muted reveal" data-delay="1" style="max-width:34ch;margin-bottom:var(--s-5)">Dates, directions and calendar downloads for every meet this season.</p>
+        <a class="link-arrow reveal" data-delay="1" href="meets.html">Full meet calendar &amp; results {{arrow}}</a>
+      </div>
+      <div class="reveal" data-delay="1">
+        <ol class="meet-list meet-list--teaser" data-meets-teaser-list>
+          {{meets_next}}
+        </ol>
+        <p class="muted" data-meets-teaser-empty hidden>The next season's meets will be posted soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="results-title" style="padding-top:0">
     <div class="container">
       <div class="split" style="margin-bottom:var(--s-8)">
         <div>
@@ -83,14 +99,16 @@ bar: yes
         <div class="reveal" data-delay="1">
           <p class="highlight-quote">In 2021, NIX gymnast Aleksandr earned a place on the <em>Future Stars National Team</em> for 11-year-olds.</p>
           <p class="muted measure">Coach Nikolai's athletes have competed at USA Junior Olympic National Championships and USA National Championships. NIX teams have competed at meets such as the Harvest Meet, Gobble Wobble, Judge's Cup, Winter Carnival, Boston Classic, Hip Hop Classic and the New England Championships.</p>
+          <a class="link-arrow" href="meets.html#results">Team results &amp; news {{arrow}}</a>
         </div>
       </div>
       <div class="mosaic">
         <div class="img reveal"><img src="assets/img/coach-spot-bar.jpg" srcset="assets/img/coach-spot-bar-sm.jpg 720w, assets/img/coach-spot-bar.jpg 1440w" sizes="(max-width: 760px) 100vw, 38vw" width="1440" height="1800" alt="Coach Nikolai spots a gymnast as she stands on the low bar" loading="lazy"></div>
-        <div class="img reveal" data-delay="1"><img src="assets/img/boys-pbars-handstand-sm.jpg" width="599" height="900" alt="A NIX gymnast holds a handstand on the parallel bars" loading="lazy" style="object-position:50% 35%"></div>
+        <div class="img reveal" data-delay="1"><img src="assets/img/boys-pbars-back-sm.jpg" width="599" height="900" alt="A NIX gymnast, bib 451, holds a handstand on the parallel bars" loading="lazy" style="object-position:50% 40%"></div>
         <div class="img reveal" data-delay="2"><img src="assets/img/beam-coach-sm.jpg" width="695" height="900" alt="Coach Nikolai guides a gymnast on the beam" loading="lazy"></div>
         <div class="img reveal" data-delay="1"><img src="assets/img/boys-pommel-flair.jpg" srcset="assets/img/boys-pommel-flair-sm.jpg 900w, assets/img/boys-pommel-flair.jpg 1800w" sizes="(max-width: 760px) 100vw, 60vw" width="1800" height="1198" alt="A NIX gymnast extends fully horizontal over the pommel horse" loading="lazy" style="object-position:50% 45%"></div>
       </div>
+      <a class="link-arrow" href="galleries.html" style="margin-top:var(--s-6)">Team photo galleries {{arrow}}</a>
     </div>
   </section>
 

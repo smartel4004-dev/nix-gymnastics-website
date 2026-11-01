@@ -1,0 +1,41 @@
+title: Photo Galleries
+description: Photos from NIX Gymnastics competitive team meets, organized by meet. Filter by season and by boys' or girls' team.
+nav: team
+bar: yes
+---
+<main id="main">
+
+  <header class="page-hero">
+    <div class="container page-hero-grid">
+      <h1 class="h1">Photo <span class="leap leap--green">galleries</span></h1>
+      <div>
+        <p class="lead">Every meet, every routine we could catch. Pick a season or a team to narrow it down.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" aria-label="Galleries" data-galleries style="padding-top:0">
+    <div class="container">
+      <div class="gallery-filters">
+        <div class="meets-filter" role="group" aria-label="Season">
+          {{gallery_season_filters}}
+        </div>
+        <div class="meets-filter" role="group" aria-label="Team">
+          <button class="seg" type="button" data-gfilter="squad" data-value="all" aria-pressed="true">Both teams</button>
+          <button class="seg" type="button" data-gfilter="squad" data-value="boys" aria-pressed="false">Boys' team</button>
+          <button class="seg" type="button" data-gfilter="squad" data-value="girls" aria-pressed="false">Girls' team</button>
+        </div>
+      </div>
+      <p class="finder-status" role="status" aria-live="polite" data-gallery-status></p>
+
+      <ul class="gallery-cards">
+        {{gallery_cards}}
+      </ul>
+      <div class="meets-empty" data-gallery-empty hidden>
+        <h3 class="h3">No galleries match yet</h3>
+        <p class="muted">Try another season or team. Photos usually go up within a week or two of each meet.</p>
+      </div>
+    </div>
+  </section>
+
+</main>

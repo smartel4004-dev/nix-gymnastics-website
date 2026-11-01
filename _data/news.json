@@ -1,0 +1,18 @@
+[
+  {"date": "2021", "kind": "result", "title": "Aleksandr named to the Future Stars National Team",
+   "body": "Aleksandr's hard work paid off at the 2021 Future Stars National Championships, where he earned a place on the USA Gymnastics Future Stars National Team for 11-year-olds.",
+   "link": {"label": "USA Gymnastics announcement", "url": "https://usagym.org/pages/post.html?PostID=26785"}},
+  {"date": "2019", "kind": "result", "title": "First place at Regional Future Stars",
+   "body": "Aleksandr took first place at the 2019 Regional Future Stars and was named to the Region 6 Development Team for 9-year-olds.",
+   "link": {"label": "Region 6 Development Team", "url": "https://usagym.org/pages/men/pages/fsdev_2019.html"}},
+  {"date": "2016", "kind": "result", "title": "New England Championships 2016",
+   "body": "Aleksandr won the all-around silver in Class 4, with gold on high bar and a share of gold on vault. Cameron placed fourth all-around in Class 5.",
+   "scoreboard": {
+     "events": ["Floor", "Pommel", "Rings", "Vault", "P-bars", "High bar", "All-around"],
+     "rows": [
+       {"gymnast": "Aleksandr B.", "level": "Class 4",
+        "scores": [["10.700","2"],["9.000","8"],["10.300","4"],["9.200","1T"],["10.300","6"],["11.000","1"],["60.500","2"]]},
+       {"gymnast": "Cameron J.", "level": "Class 5",
+        "scores": [["11.600","3"],["10.900","7T"],["11.600","2"],["9.400","4T"],["10.600","4T"],["9.900","17"],["64.000","4T"]]}
+     ]}}
+]

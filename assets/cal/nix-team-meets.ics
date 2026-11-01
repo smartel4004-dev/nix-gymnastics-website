@@ -1,0 +1,55 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NIX Gymnastics//Team meets//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:NIX Gymnastics team meets
+BEGIN:VEVENT
+UID:2026-jingle-bell-bush@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261204
+DTEND;VALUE=DATE:20261207
+SUMMARY:2026 Jingle Bell Bush – NIX girls' team
+DESCRIPTION:NIX Gymnastics girls' team meet. Hosted by Noha's Gymnastics Academy. Your coach confirms session and report times.
+LOCATION:Noha's Gymnastics Academy\, 200 Perimeter Rd\, Manchester\, NH\, 03103
+URL:https://www.ngacademy.us
+END:VEVENT
+BEGIN:VEVENT
+UID:steve-randall-invitational-2026@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261214
+SUMMARY:Steve Randall Invitational – NIX boys' team
+DESCRIPTION:NIX Gymnastics boys' team meet. Hosted by Yellow Jackets Gymnastics Club. Your coach confirms session and report times.
+LOCATION:Mill Works\, 22 Town Farm Rd\, Westford\, MA\, 01886
+URL:https://www.yellowjacketsgym.com
+END:VEVENT
+BEGIN:VEVENT
+UID:jr-rocky-mountain-open-2027@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270118
+SUMMARY:Jr. Rocky Mountain Open – NIX boys' team
+DESCRIPTION:NIX Gymnastics boys' team meet. Hosted by Golden Gymnastics. Your coach confirms session and report times.
+LOCATION:US Air Force Academy\, Cadet Gymnasium\, Colorado Springs\, CO\, 80840
+END:VEVENT
+BEGIN:VEVENT
+UID:frederick-flips-2027@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270213
+DTEND;VALUE=DATE:20270214
+SUMMARY:Frederick Flips – NIX boys' team
+DESCRIPTION:NIX Gymnastics boys' team meet. Hosted by USA Gymnastics. Your coach confirms session and report times.
+LOCATION:Springfield College\, 263 Alden St\, Springfield\, MA\, 01109
+URL:https://usagym.org
+END:VEVENT
+BEGIN:VEVENT
+UID:2027-boston-classic@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270227
+DTEND;VALUE=DATE:20270301
+SUMMARY:2027 Boston Classic – NIX boys' team
+DESCRIPTION:NIX Gymnastics boys' team meet. Hosted by Massachusetts Elite Gymnastics Academy. Your coach confirms session and report times.
+LOCATION:Massachusetts Elite Gymnastics Academy\, 725 Main St\, Millis\, MA\, 02054
+URL:https://masselitegymnastics.com
+END:VEVENT
+END:VCALENDAR

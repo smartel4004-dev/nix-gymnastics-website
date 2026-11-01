@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NIX Gymnastics//Team meets//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:NIX Gymnastics team meets
+BEGIN:VEVENT
+UID:jr-rocky-mountain-open-2027@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270118
+SUMMARY:Jr. Rocky Mountain Open – NIX boys' team
+DESCRIPTION:NIX Gymnastics boys' team meet. Hosted by Golden Gymnastics. Your coach confirms session and report times.
+LOCATION:US Air Force Academy\, Cadet Gymnasium\, Colorado Springs\, CO\, 80840
+END:VEVENT
+END:VCALENDAR

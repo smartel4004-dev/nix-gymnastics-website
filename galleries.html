@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Galleries | NIX Gymnastics</title>
+  <meta name="description" content="Photos from NIX Gymnastics competitive team meets, organized by meet. Filter by season and by boys' or girls' team.">
+  <meta name="theme-color" content="#0f1512">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Hanken+Grotesk:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="NIX Gymnastics home"><img src="assets/img/nix-logo-rev.svg" alt="NIX Gymnastics" width="168" height="57"></a>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav-list">
+          <li><a href="programs.html">Programs</a></li>
+          <li class="has-sub is-section" data-subnav>
+            <a href="team.html">Competitive Team</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-team"><svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="m1 1.5 5 5 5-5" stroke="currentColor" stroke-width="2"/></svg><span class="visually-hidden">Competitive Team pages</span></button>
+            <div class="sub" id="sub-team">
+              <ul>
+              <li><a href="team.html">Team overview<small>Training, events and how athletes join</small></a></li>
+              <li><a href="meets.html">Meet calendar<small>Upcoming meets, directions, add to calendar</small></a></li>
+              <li><a href="meets.html#results">Results &amp; news<small>Scores and team milestones</small></a></li>
+              <li><a href="galleries.html" aria-current="page">Photo galleries<small>Meet photos by season and team</small></a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="parties.html">Parties & Open Gym</a></li>
+          <li><a href="about.html">About</a></li>
+      </ul>
+      <a class="header-phone" href="tel:+16038783051">(603) 878-3051</a>
+      <a class="btn btn--tint btn--sm" href="contact.html">Book a free trial</a>
+    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>
+      Menu <span class="bars" aria-hidden="true"><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" aria-hidden="true" inert>
+  <div class="menu-top">
+    <a class="brand" href="index.html" aria-label="NIX Gymnastics home"><img src="assets/img/nix-logo-rev.svg" alt="NIX Gymnastics" width="140" height="47"></a>
+    <button class="menu-toggle menu-close" type="button" data-menu-close style="display:inline-flex">
+      Close <span class="bars" aria-hidden="true"><span></span><span></span></span>
+    </button>
+  </div>
+  <ul class="menu-list">
+    <li><a href="programs.html">Programs <small>Classes by age</small></a></li>
+          <li class="is-section"><a href="team.html">Competitive Team <small>Boys & girls</small></a><ul class="menu-sub"><li><a href="meets.html">Meet calendar</a></li><li><a href="meets.html#results">Results &amp; news</a></li><li><a href="galleries.html" aria-current="page">Photo galleries</a></li></ul></li>
+          <li><a href="parties.html">Parties & Open Gym <small>Weekends & drop-in</small></a></li>
+          <li><a href="about.html">About <small>Coaches & gym</small></a></li>
+          <li><a href="contact.html">Contact <small>Visit or call</small></a></li>
+  </ul>
+  <div class="menu-foot">
+    <a class="btn btn--tint btn--lg" href="contact.html">Book a free trial class <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
+    <div class="menu-contact">
+      <a href="tel:+16038783051">(603) 878-3051</a>
+      <span>138 Turnpike Rd, New Ipswich, NH</span>
+    </div>
+  </div>
+</div>
+<main id="main">
+
+  <header class="page-hero">
+    <div class="container page-hero-grid">
+      <h1 class="h1">Photo <span class="leap leap--green">galleries</span></h1>
+      <div>
+        <p class="lead">Every meet, every routine we could catch. Pick a season or a team to narrow it down.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" aria-label="Galleries" data-galleries style="padding-top:0">
+    <div class="container">
+      <div class="gallery-filters">
+        <div class="meets-filter" role="group" aria-label="Season">
+          <button class="seg" type="button" data-gfilter="season" data-value="all" aria-pressed="true">All seasons</button>
+          <button class="seg" type="button" data-gfilter="season" data-value="2025–26" aria-pressed="false">2025–26</button>
+        </div>
+        <div class="meets-filter" role="group" aria-label="Team">
+          <button class="seg" type="button" data-gfilter="squad" data-value="all" aria-pressed="true">Both teams</button>
+          <button class="seg" type="button" data-gfilter="squad" data-value="boys" aria-pressed="false">Boys' team</button>
+          <button class="seg" type="button" data-gfilter="squad" data-value="girls" aria-pressed="false">Girls' team</button>
+        </div>
+      </div>
+      <p class="finder-status" role="status" aria-live="polite" data-gallery-status></p>
+
+      <ul class="gallery-cards">
+        <li class="gcard" data-season="2025–26" data-squad="boys">
+          <a href="gallery-2026-development-program-national-championships.html">
+            <span class="gcard-img img"><img src="assets/galleries/2026-development-program-national-championships/sm/f95_8325.jpg" alt="" width="426" height="640" loading="lazy"></span>
+            <span class="gcard-meta">Boys' team · May 2026</span>
+            <h3 class="gcard-title">2026 Development Program National Championships</h3>
+            <span class="gcard-count">10 photos</span>
+          </a>
+        </li>
+        <li class="gcard" data-season="2025–26" data-squad="girls">
+          <a href="gallery-friendship-classic-2026.html">
+            <span class="gcard-img img"><img src="assets/galleries/friendship-classic-2026/sm/ka3a8047.jpg" alt="" width="495" height="640" loading="lazy"></span>
+            <span class="gcard-meta">Girls' team · Jan 2026</span>
+            <h3 class="gcard-title">Friendship Classic</h3>
+            <span class="gcard-count">20 photos</span>
+          </a>
+        </li>
+      </ul>
+      <div class="meets-empty" data-gallery-empty hidden>
+        <h3 class="h3">No galleries match yet</h3>
+        <p class="muted">Try another season or team. Photos usually go up within a week or two of each meet.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/nix-logo-rev.svg" alt="NIX Gymnastics" width="190" height="64" loading="lazy">
+        <p>Gymnastics, tumbling and circus classes for boys and girls, from first steps to competitive team. New Ipswich, New Hampshire.</p>
+        <ul class="social" aria-label="NIX Gymnastics on social media">
+          <li><a href="https://www.facebook.com/NIX-GYM-LLC-100731539967950/" rel="noopener" target="_blank" aria-label="Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9Z"/></svg></a></li>
+          <li><a href="https://www.youtube.com/channel/UCjNNc5FpwyWCU7XXIew-84g" rel="noopener" target="_blank" aria-label="YouTube (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <address>138 Turnpike Rd<br>New Ipswich, NH 03071</address>
+        <a href="https://maps.google.com/?q=138+Turnpike+Rd+New+Ipswich+NH+03071" rel="noopener">Get directions</a>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+16038783051">(603) 878-3051</a></li>
+          <li><a href="mailto:obrovin@nixgym.com">obrovin@nixgym.com</a></li>
+          <li><a href="contact.html">Book a free trial</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="team.html">Competitive Team</a></li>
+          <li><a href="meets.html">Meets &amp; results</a></li>
+          <li><a href="galleries.html">Photo galleries</a></li>
+          <li><a href="parties.html">Parties &amp; Open Gym</a></li>
+          <li><a href="about.html">About NIX</a></li>
+          <li><a href="assets/docs/nix-registration-form.pdf" download="NIX-Gymnastics-registration-form.pdf">Registration form (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>&copy; <span data-year>2026</span> NIX Gym, LLC</span>
+      <span>Gymnastics for a healthy life.</span>
+    </div>
+  </div>
+</footer>
+<div class="mobile-bar" aria-label="Quick actions">
+  <a class="btn btn--tint" href="contact.html">Book a free trial <svg class="arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></a>
+  <a class="call" href="tel:+16038783051" aria-label="Call NIX Gymnastics"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Call</a>
+</div>
+<script src="assets/js/main.js" defer></script>
+<script>document.querySelectorAll('[data-year]').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+</body>
+</html>

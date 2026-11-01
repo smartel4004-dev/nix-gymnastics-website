@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NIX Gymnastics//Team meets//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:NIX Gymnastics team meets
+BEGIN:VEVENT
+UID:nh-state-championships-boys-2026@nixgym.com
+DTSTAMP:20260101T000000Z
+DTSTART;VALUE=DATE:20260314
+DTEND;VALUE=DATE:20260316
+SUMMARY:NH State Championships (boys) – NIX boys' team
+DESCRIPTION:NIX Gymnastics boys' team meet. Hosted by NH Men's Gymnastics. Your coach confirms session and report times.
+LOCATION:NH
+END:VEVENT
+END:VCALENDAR
